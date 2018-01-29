@@ -1,0 +1,15 @@
+
+<article class="friendslist">
+  <div class="container">
+    <div class="row">
+        <% friends.forEach(function(item) { %>
+        <div class="col-sm-8">
+          <h3 class="friendslist-title"><%= item.title %></h3>
+          <h5 class="friendslist-name"> <a href="/friends/<%= item.EmpNo %>"><%= item.FirstName %></a></h5>
+          <p class="friendslist-info"><a href="/friends/<%= item.EmpNo %>">
+          </a></p>
+        </div>
+        <%  }); %>
+    </div><!-- row -->
+  </div><!-- container -->
+</article>
