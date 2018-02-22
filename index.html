@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="app">
 
+<head>
+  <meta charset="utf-8" />
+  <title>Simple qTip2 +  angularjs test</title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/qtip2/2.1.1/jquery.qtip.min.css" />
+
+</head>
+
+
+
+<body ng-controller="controller">
+  <div>
+    <span title="I am a title tooltip">
+      Hover over me to see static title qtip
+    </span>
+  </div>
+  <style>
+    .hello{
+      color: black;
+      background : white;
+    }
+  </style>
+ 
+
+  <br/>
+  <div>
+    Hover over list items to see qtip in angular:
+    <ul>
+      <li ng-repeat="friend in friends">
+        <span qtip="<div class='hello'>
+        <div> This is extra items here </div>
+        <div class='more'>MOre extra items</div>
+        {{friend.gender}} ({{friend.age}} years old)</br>
+         <a href='https://krishikaadvisors.com/niraj'>Niraj Kumar</a>
+        </div></span>"> [{{$index + 1}}] {{friend.name}}</span>
+      </li>
+    </ul>
+  </div>
+
+
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script data-require="angular.js@*" data-semver="1.1.5" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
+  <script src="http://cdn.jsdelivr.net/qtip2/2.2.0/jquery.qtip.min.js"></script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>
